@@ -1,0 +1,9 @@
+{
+  "Collapse Comment": {
+    "prefix": "collapseComment",
+    "body": [
+      "// 📂"
+    ],
+    "description": "Add a collapse comment above a function"
+  }
+}

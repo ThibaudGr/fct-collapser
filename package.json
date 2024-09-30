@@ -1,0 +1,60 @@
+{
+  "name": "fct-collapser",
+  "displayName": "fct-collapser",
+  "publisher": "ThibaudGr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThibaudGr/fct-collapser"
+  },
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "functionCollapser.collapseFunctions",
+        "title": "Do Collapse Functions"
+      },
+      {
+        "command": "functionCollapser.uncollapseFunctions",
+        "title": "Do Uncollapse Functions"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/collapseSnippet.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/collapseSnippet.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.92.0",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.11.1",
+    "typescript": "^5.6.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
